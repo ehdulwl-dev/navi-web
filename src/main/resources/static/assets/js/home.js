@@ -51,7 +51,22 @@ class JobSearchApp {
     }
 }
 
-// Initialize the application when the DOM is fully loaded
+
 document.addEventListener("DOMContentLoaded", () => {
-    const app = new JobSearchApp();
+    fetch("/footer.html")
+        .then(res => res.text())
+        .then(data => {
+            document.getElementById("footer-container").innerHTML = data;
+
+            const navItems = document.querySelectorAll(".nav-item");
+            navItems.forEach(item => {
+                item.addEventListener("click", (e) => {
+                    navItems.forEach(i => i.classList.remove("nav-active"));
+                    item.classList.add("nav-active");
+
+                    const text = item.querySelector(".nav-text")?.textContent;
+                    console.log("클릭됨:", text);
+                });
+            });
+        });
 });
