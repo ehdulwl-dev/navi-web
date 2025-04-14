@@ -1,0 +1,637 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Job Information</title>
+    <style>
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family:
+                    NanumGothic,
+                    -apple-system,
+                    Roboto,
+                    Helvetica,
+                    sans-serif;
+            background-color: #f5f5f5;
+        }
+
+        /* Main container */
+        .job-info {
+            background-color: rgba(255, 255, 255, 1);
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 480px;
+            width: 100%;
+            padding-top: 17px;
+            overflow: hidden;
+            font-family:
+                    NanumGothic,
+                    -apple-system,
+                    Roboto,
+                    Helvetica,
+                    sans-serif;
+        }
+
+        .job-container {
+            display: flex;
+            width: 100%;
+            padding-left: 20px;
+            padding-right: 20px;
+            flex-direction: column;
+            align-items: start;
+        }
+
+        /* Company header */
+        .company-logo {
+            aspect-ratio: 1.22;
+            object-fit: contain;
+            object-position: center;
+            width: 61px;
+        }
+
+        .company-name {
+            color: rgba(90, 90, 90, 1);
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 2;
+            margin-top: 22px;
+            margin-left: 14px;
+        }
+
+        .job-title {
+            color: rgba(33, 33, 33, 1);
+            font-size: 20px;
+            font-weight: 700;
+            margin-top: 20px;
+            margin-left: 13px;
+        }
+
+        .divider {
+            aspect-ratio: 333.33;
+            object-fit: contain;
+            object-position: center;
+            width: 100%;
+            margin-top: 21px;
+            margin-left: 13px;
+            max-width: 324px;
+        }
+
+        /* Job details */
+        .job-details {
+            align-self: center;
+            display: flex;
+            margin-top: 13px;
+            width: 100%;
+            max-width: 326px;
+            align-items: stretch;
+            gap: 20px;
+            font-size: 13px;
+            font-weight: 700;
+            line-height: 2;
+            justify-content: space-between;
+        }
+
+        .details-left {
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+        }
+
+        .experience-row {
+            display: flex;
+            align-items: stretch;
+            gap: 20px;
+            justify-content: space-between;
+        }
+
+        .detail-label {
+            color: rgba(90, 90, 90, 1);
+        }
+
+        .detail-value-highlight {
+            color: rgba(75, 159, 248, 1);
+        }
+
+        .education-row {
+            align-self: start;
+            display: flex;
+            margin-top: 16px;
+            align-items: stretch;
+            gap: 25px;
+            white-space: nowrap;
+        }
+
+        .details-right {
+            display: flex;
+            align-items: stretch;
+            gap: 25px;
+            color: rgba(90, 90, 90, 1);
+        }
+
+        .labels-column {
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+            white-space: nowrap;
+        }
+
+        .salary-label {
+            align-self: start;
+        }
+
+        .location-label {
+            margin-top: 16px;
+        }
+
+        .values-column {
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+        }
+
+        .location-value {
+            align-self: start;
+            margin-top: 16px;
+        }
+
+        .employment-type {
+            display: flex;
+            margin-top: 16px;
+            margin-left: 17px;
+            align-items: stretch;
+            gap: 17px;
+            font-size: 13px;
+            font-weight: 700;
+            line-height: 2;
+        }
+
+        .divider-second {
+            aspect-ratio: 333.33;
+            object-fit: contain;
+            object-position: center;
+            width: 100%;
+            margin-top: 32px;
+            margin-left: 13px;
+            max-width: 324px;
+        }
+
+        /* Tab navigation */
+        .tab-navigation {
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 1);
+            display: flex;
+            margin-top: 22px;
+            width: 264px;
+            max-width: 100%;
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-top: 1px;
+            padding-bottom: 1px;
+            align-items: stretch;
+            gap: 38px;
+            font-size: 20px;
+            color: rgba(33, 33, 33, 1);
+            font-weight: 400;
+            text-align: center;
+        }
+
+        .tab-item {
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+            white-space: nowrap;
+        }
+
+        .tab-text {
+            align-self: center;
+        }
+
+        .tab-indicator {
+            border-radius: 10px;
+            background-color: rgba(67, 67, 67, 1);
+            display: flex;
+            margin-top: 11px;
+            flex-shrink: 0;
+            height: 3px;
+        }
+
+        .tab-item-secondary {
+            align-self: start;
+            flex-grow: 1;
+            flex-shrink: 1;
+            width: 145px;
+        }
+
+        /* Company message */
+        .company-message {
+            border-radius: 10px;
+            background-color: rgba(255, 246, 210, 1);
+            display: flex;
+            margin-top: 21px;
+            width: 100%;
+            max-width: 334px;
+            padding-left: 11px;
+            padding-right: 11px;
+            padding-top: 23px;
+            padding-bottom: 13px;
+            flex-direction: column;
+            align-items: stretch;
+            color: rgba(0, 0, 0, 1);
+        }
+
+        .message-title {
+            font-size: 17px;
+            font-weight: 700;
+            line-height: 1;
+            align-self: start;
+        }
+
+        .message-content {
+            font-size: 15px;
+            font-weight: 400;
+            line-height: 30px;
+            margin-top: 11px;
+        }
+
+        .job-position {
+            color: rgba(0, 0, 0, 1);
+            font-size: 18px;
+            font-weight: 700;
+            margin-top: 30px;
+            margin-left: 10px;
+        }
+
+        .divider-third {
+            aspect-ratio: 333.33;
+            object-fit: contain;
+            object-position: center;
+            width: 100%;
+            margin-top: 12px;
+            margin-left: 10px;
+            max-width: 324px;
+        }
+
+        /* Job responsibilities */
+        .responsibilities {
+            display: flex;
+            margin-top: 16px;
+            align-items: stretch;
+            gap: 7px;
+            font-size: 15px;
+            color: rgba(0, 0, 0, 1);
+        }
+
+        .section-title {
+            font-weight: 700;
+            align-self: start;
+        }
+
+        .responsibilities-content {
+            font-weight: 400;
+            line-height: 15px;
+            flex-basis: auto;
+            flex-grow: 1;
+            flex-shrink: 1;
+        }
+
+        .responsibilities-content ul {
+            list-style-position: inside;
+            padding-left: 10px;
+        }
+
+        .divider-fourth {
+            aspect-ratio: 333.33;
+            object-fit: contain;
+            object-position: center;
+            width: 100%;
+            margin-top: 16px;
+            margin-left: 10px;
+            max-width: 324px;
+        }
+
+        /* Qualifications */
+        .qualifications {
+            display: flex;
+            margin-top: 12px;
+            align-items: stretch;
+            gap: 10px;
+            font-size: 15px;
+            color: rgba(0, 0, 0, 1);
+        }
+
+        .qualifications-content {
+            font-weight: 400;
+            line-height: 20px;
+            flex-basis: auto;
+            flex-grow: 1;
+            flex-shrink: 1;
+        }
+
+        .divider-fifth {
+            aspect-ratio: 333.33;
+            object-fit: contain;
+            object-position: center;
+            width: 100%;
+            margin-top: 9px;
+            max-width: 324px;
+        }
+
+        /* Preferred qualifications */
+        .preferred-qualifications {
+            display: flex;
+            margin-top: 11px;
+            align-items: stretch;
+            gap: 5px;
+            font-size: 15px;
+            color: rgba(0, 0, 0, 1);
+        }
+
+        .preferred-content {
+            font-weight: 400;
+            line-height: 20px;
+            flex-basis: auto;
+            flex-grow: 1;
+            flex-shrink: 1;
+        }
+
+        /* Application info */
+        .application-info {
+            border-radius: 10px;
+            border-color: rgba(75, 159, 248, 1);
+            border-style: solid;
+            border-width: 1px;
+            display: flex;
+            margin-top: 32px;
+            width: 100%;
+            max-width: 327px;
+            padding-left: 9px;
+            padding-right: 65px;
+            padding-top: 14px;
+            padding-bottom: 14px;
+            flex-direction: column;
+            align-items: start;
+            font-size: 15px;
+            color: rgba(0, 0, 0, 1);
+        }
+
+        .application-title {
+            font-weight: 700;
+        }
+
+        .application-details {
+            font-weight: 400;
+            line-height: 20px;
+            margin-top: 11px;
+        }
+
+        /* Contact info */
+        .contact-info {
+            border-radius: 10px;
+            border-color: rgba(75, 159, 248, 1);
+            border-style: solid;
+            border-width: 1px;
+            display: flex;
+            margin-top: 17px;
+            width: 100%;
+            max-width: 327px;
+            padding-left: 9px;
+            padding-right: 65px;
+            padding-top: 13px;
+            padding-bottom: 13px;
+            flex-direction: column;
+            align-items: start;
+            font-size: 15px;
+            color: rgba(0, 0, 0, 1);
+        }
+
+        .contact-title {
+            font-weight: 700;
+            line-height: 1;
+        }
+
+        .contact-details {
+            font-weight: 400;
+            line-height: 20px;
+            margin-top: 6px;
+            width: 100%;
+        }
+
+        /* Original posting link */
+        .original-posting {
+            display: flex;
+            margin-top: 13px;
+            align-items: stretch;
+            gap: 8px;
+            font-size: 13px;
+            color: rgba(0, 0, 0, 1);
+            font-weight: 400;
+            line-height: 1;
+        }
+
+        .original-text {
+            flex-basis: auto;
+        }
+
+        .arrow-icon {
+            aspect-ratio: 1;
+            object-fit: contain;
+            object-position: center;
+            width: 13px;
+            align-self: start;
+            flex-shrink: 0;
+        }
+
+        /* Apply button section */
+        .apply-section {
+            background-color: rgba(255, 255, 255, 1);
+            display: flex;
+            margin-top: 9px;
+            width: 100%;
+            padding-left: 70px;
+            padding-right: 70px;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            flex-direction: column;
+            align-items: start;
+            font-size: 20px;
+            color: rgba(0, 0, 0, 1);
+            font-weight: 700;
+            white-space: nowrap;
+            text-align: center;
+            justify-content: center;
+        }
+
+        .apply-button {
+            align-self: stretch;
+            border-radius: 5px;
+            background-color: rgba(255, 227, 118, 1);
+            min-height: 46px;
+            padding: 13px 10px;
+            gap: 10px;
+            border: none;
+            font-size: 20px;
+            font-weight: 700;
+            cursor: pointer;
+            font-family: inherit;
+        }
+    </style>
+</head>
+<body>
+<article class="job-info">
+    <div class="job-container">
+        <header>
+            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/b1a19f432596a1a2acfd220aafb1bd191225f7ba?placeholderIfAbsent=true&apiKey=005c88254743412a8fbdeef29d674822" alt="Company logo" class="company-logo" />
+            <h2 class="company-name">(주) 벨 에스엠</h2>
+            <h1 class="job-title">[효종연구소] 보안원 채용 (3교대)</h1>
+        </header>
+
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/002029c3a042e9539ff194b3708dfc1f0ae9e07c?placeholderIfAbsent=true&apiKey=005c88254743412a8fbdeef29d674822" alt="Divider" class="divider" />
+
+        <section class="job-details">
+            <div class="details-left">
+                <div class="experience-row">
+                    <span class="detail-label">경력</span>
+                    <span class="detail-value-highlight">경력 1년 이상</span>
+                </div>
+                <div class="education-row">
+                    <span class="detail-label">학력</span>
+                    <span class="detail-value-highlight">학력무관</span>
+                </div>
+            </div>
+            <div class="details-right">
+                <div class="labels-column">
+                    <span class="salary-label">급여</span>
+                    <span class="location-label">근무지역</span>
+                </div>
+                <div class="values-column">
+                    <span>월급 2.6백만원</span>
+                    <span class="location-value">경기 용인시</span>
+                </div>
+            </div>
+        </section>
+
+        <div class="employment-type">
+            <span class="detail-label">근무형태</span>
+            <span class="detail-value-highlight">계약직 24개월</span>
+        </div>
+
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/002029c3a042e9539ff194b3708dfc1f0ae9e07c?placeholderIfAbsent=true&apiKey=005c88254743412a8fbdeef29d674822" alt="Divider" class="divider-second" />
+
+        <nav class="tab-navigation">
+            <div class="tab-item">
+                <span class="tab-text">공고</span>
+                <div class="tab-indicator"></div>
+            </div>
+            <span class="tab-item-secondary">맞춤형 공고 분석</span>
+        </nav>
+
+        <section class="company-message">
+            <h3 class="message-title">기업의 말</h3>
+            <p class="message-content">
+                ​소매업에서의 혁신을 통해 고객들에게 즐거운 경험을 주고자 하는
+                기업에서 수도권에 다수의 마트 오픈을 기획 중입니다.
+            </p>
+        </section>
+
+        <h3 class="job-position">00마트 지점장</h3>
+
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/e66fa45881e0e3f40bbdcee06cd4dbe39b95e362?placeholderIfAbsent=true&apiKey=005c88254743412a8fbdeef29d674822" alt="Divider" class="divider-third" />
+
+        <section class="responsibilities">
+            <h4 class="section-title">담당 업무</h4>
+            <div class="responsibilities-content">
+                <strong> 신규 매장의 전반적인 운영 및 관리 </strong>
+                <br />
+                <ul>
+                    <li>
+                <span style="line-height: 20px"
+                >경쟁사 분석 및 시장 동향 파악</span
+                >
+                    </li>
+                    <li>
+                <span style="line-height: 20px">
+                  매출 목표 설정 및 달성을 위한 전략 수립
+                </span>
+                    </li>
+                    <li>
+                <span style="line-height: 20px"
+                >상품 구성 및 판매 전략 기획</span
+                >
+                    </li>
+                    <li>
+                <span style="line-height: 20px">
+                  판촉 행사 및 프로모션 기획 및 실행
+                </span>
+                    </li>
+                </ul>
+                <br />
+            </div>
+        </section>
+
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/d05dbd373c0cc47d1ce15a60c631f1fd958bf27f?placeholderIfAbsent=true&apiKey=005c88254743412a8fbdeef29d674822" alt="Divider" class="divider-fourth" />
+
+        <section class="qualifications">
+            <h4 class="section-title">자격사항</h4>
+            <p class="qualifications-content">
+                매장 운영 및 인력 관리 경험 보유
+                <br />
+                재고 및 상품 운영 관리 역량 보유
+                <br />
+                고객 서비스 및 CS 관리 능력
+                <br />
+                매출 분석 및 비용 절감 전략 수립 능력
+            </p>
+        </section>
+
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/d05dbd373c0cc47d1ce15a60c631f1fd958bf27f?placeholderIfAbsent=true&apiKey=005c88254743412a8fbdeef29d674822" alt="Divider" class="divider-fifth" />
+
+        <section class="preferred-qualifications">
+            <h4 class="section-title">우대사항</h4>
+            <p class="preferred-content">
+                신규 매장 오픈 및 초기 운영 경험 보유자
+                <br />
+                유통업 관련 자격증 (유통관리사 등)보유자
+                <br />
+                수도권 지역 내 유통 및 물류 네트워크 보유자
+            </p>
+        </section>
+
+        <section class="application-info">
+            <h4 class="application-title">접수 기간 및 방법</h4>
+            <p class="application-details">
+                접수 기간: 채용 시 마감
+                <br />
+                접수 방��: 온라인, 이메일
+                <br />
+                이력서 양식: 자유
+            </p>
+        </section>
+
+        <section class="contact-info">
+            <h4 class="contact-title">문의 사항</h4>
+            <p class="contact-details">
+                휴대폰: 010-0000-0000
+                <br />
+                이메일: glskdnfls@gmail.com
+            </p>
+        </section>
+
+        <a href="#" class="original-posting">
+            <span class="original-text">공고 원문 확인하기</span>
+            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/40dfa99adfc57202dcd1246caa230b325325f80d?placeholderIfAbsent=true&apiKey=005c88254743412a8fbdeef29d674822" alt="Arrow" class="arrow-icon" />
+        </a>
+    </div>
+
+    <footer class="apply-section">
+        <button class="apply-button">지원하기</button>
+    </footer>
+</article>
+</body>
+</html>

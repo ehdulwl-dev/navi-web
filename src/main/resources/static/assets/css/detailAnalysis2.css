@@ -1,0 +1,391 @@
+.detail-analysis {
+    background-color: rgba(255, 255, 255, 1);
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 480px;
+    width: 100%;
+    padding-top: 17px;
+    flex-direction: column;
+    overflow: hidden;
+    align-items: stretch;
+    font-family: NanumGothic, -apple-system, Roboto, Helvetica, sans-serif;
+    font-weight: 700;
+}
+
+/* Job Header Section */
+.job-header {
+    display: flex;
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 40px;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.company-logo {
+    aspect-ratio: 1.22;
+    object-fit: contain;
+    object-position: center;
+    width: 61px;
+}
+
+.company-name {
+    color: rgba(90, 90, 90, 1);
+    font-size: 14px;
+    line-height: 2;
+    margin-top: 22px;
+    margin-left: 14px;
+    font-weight: 700;
+}
+
+.job-position {
+    color: rgba(33, 33, 33, 1);
+    font-size: 20px;
+    margin-top: 20px;
+    margin-left: 13px;
+    font-weight: 700;
+}
+
+.divider {
+    aspect-ratio: 333.33;
+    object-fit: contain;
+    object-position: center;
+    width: 100%;
+    margin-top: 21px;
+    margin-left: 13px;
+    max-width: 324px;
+    border: none;
+    height: 1px;
+    background-color: rgba(200, 200, 200, 0.5);
+}
+
+/* Job Details Section */
+.job-details {
+    display: flex;
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 40px;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.details-row {
+    display: flex;
+    margin-top: 13px;
+    margin-left: 17px;
+    align-items: stretch;
+    gap: 40px 49px;
+    font-size: 13px;
+    line-height: 2;
+}
+
+.details-column {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.detail-item {
+    display: flex;
+    align-items: stretch;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.detail-item:not(:first-child) {
+    margin-top: 16px;
+}
+
+.detail-label {
+    color: rgba(90, 90, 90, 1);
+}
+
+.detail-value {
+    color: rgba(90, 90, 90, 1);
+}
+
+.highlight {
+    color: rgba(75, 159, 248, 1);
+}
+
+.employment-type {
+    display: flex;
+    margin-top: 16px;
+    margin-left: 17px;
+    align-items: stretch;
+    gap: 17px;
+    font-size: 13px;
+    line-height: 2;
+}
+
+/* Tab Navigation */
+.tab-navigation {
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 1);
+    display: flex;
+    margin-top: 22px;
+    margin-left: 20px;
+    width: 264px;
+    max-width: 100%;
+    padding-left: 18px;
+    padding-right: 18px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    align-items: stretch;
+    gap: 20px;
+    font-size: 20px;
+    color: rgba(33, 33, 33, 1);
+    font-weight: 400;
+    text-align: center;
+    justify-content: space-between;
+}
+
+.tab-button {
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: rgba(33, 33, 33, 1);
+    font-weight: 400;
+    text-align: center;
+    padding: 0;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.tab-button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.tab-indicator {
+    border-radius: 10px;
+    background-color: rgba(67, 67, 67, 1);
+    display: flex;
+    margin-top: 10px;
+    flex-shrink: 0;
+    height: 3px;
+}
+
+/* Analysis Section */
+.analysis-section {
+    display: flex;
+    margin-top: 23px;
+    margin-left: 33px;
+    align-items: stretch;
+    gap: 40px 100px;
+    font-size: 22px;
+    color: rgba(33, 33, 33, 1);
+    line-height: 1;
+}
+
+.section-header {
+    display: flex;
+    align-items: center;
+    gap: 100px;
+}
+
+.section-title {
+    font-size: 22px;
+    color: rgba(33, 33, 33, 1);
+    line-height: 1;
+    font-weight: 700;
+    margin: 0;
+}
+
+.info-icon {
+    aspect-ratio: 1;
+    object-fit: contain;
+    object-position: center;
+    width: 24px;
+    align-self: start;
+    flex-shrink: 0;
+}
+
+.chart-icon {
+    aspect-ratio: 1;
+    object-fit: contain;
+    object-position: center;
+    width: 22px;
+    align-self: center;
+    margin-top: 29px;
+    margin-left: 21px;
+}
+
+.match-box {
+    align-self: center;
+    display: flex;
+    margin-top: 7px;
+    width: 323px;
+    flex-shrink: 0;
+    max-width: 100%;
+    height: 11px;
+}
+
+.match-percentage {
+    color: rgba(0, 0, 0, 1);
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 30px;
+    text-align: center;
+    align-self: center;
+    margin-top: 7px;
+    width: 285px;
+}
+
+/* Experience Section */
+.experience-section {
+    display: flex;
+    margin-top: 41px;
+    width: 100%;
+    padding-left: 8px;
+    padding-right: 8px;
+    flex-direction: column;
+    align-items: stretch;
+    color: rgba(0, 0, 0, 1);
+    font-weight: 400;
+}
+
+.section-divider {
+    aspect-ratio: 333.33;
+    object-fit: contain;
+    object-position: center;
+    width: 100%;
+    border: none;
+    height: 1px;
+    background-color: rgba(200, 200, 200, 0.5);
+}
+
+.experience-intro {
+    font-size: 17px;
+    line-height: 30px;
+    margin-top: 20px;
+    margin-left: 26px;
+    width: 285px;
+}
+
+.experience-card {
+    align-self: center;
+    position: relative;
+    display: flex;
+    margin-top: 24px;
+    min-height: 152px;
+    width: 100%;
+    max-width: 326px;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: start;
+}
+
+.card-border {
+    border-radius: 10px;
+    border-color: rgba(168, 168, 168, 1);
+    border-style: solid;
+    border-width: 1px;
+    align-self: stretch;
+    z-index: 0;
+    display: flex;
+    min-height: 152px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.card-content {
+    border-radius: 0px 0px 0px 0px;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    width: 186px;
+    max-width: 100%;
+    padding-right: 16px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    flex-direction: column;
+    margin-left: 13px;
+    margin-top: 14px;
+}
+
+.experience-company {
+    font-size: 15px;
+    line-height: 2;
+    align-self: start;
+    margin: 0;
+    font-weight: 400;
+}
+
+.experience-position {
+    font-size: 18px;
+    line-height: 1;
+    margin-top: 9px;
+    margin-bottom: 0;
+    font-weight: 400;
+}
+
+.card-divider {
+    aspect-ratio: 333.33;
+    object-fit: contain;
+    object-position: center;
+    width: 323px;
+    position: relative;
+    z-index: 1;
+    margin: 0;
+    margin-top: 20px;
+    border: none;
+    height: 1px;
+    background-color: rgba(200, 200, 200, 0.5);
+}
+
+.experience-match {
+    font-size: 15px;
+    line-height: 25px;
+    position: relative;
+    z-index: 1;
+    margin: 13px 17px;
+    width: 285px;
+}
+
+.experience-duration {
+    color: rgba(75, 159, 248, 1);
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 2;
+    text-align: center;
+    position: absolute;
+    z-index: 1;
+    right: 13px;
+    top: 6px;
+    width: 55px;
+    height: 21px;
+}
+
+/* Application Footer */
+.application-footer {
+    background-color: rgba(255, 255, 255, 1);
+    display: flex;
+    margin-top: 66px;
+    width: 100%;
+    padding: 15px 70px;
+    flex-direction: column;
+    align-items: start;
+    font-size: 20px;
+    color: rgba(0, 0, 0, 1);
+    white-space: nowrap;
+    text-align: center;
+    justify-content: center;
+}
+
+.apply-button {
+    align-self: stretch;
+    border-radius: 5px;
+    background-color: rgba(255, 227, 118, 1);
+    min-height: 46px;
+    padding: 13px 10px;
+    border: none;
+    font-size: 20px;
+    font-weight: 700;
+    font-family: inherit;
+    cursor: pointer;
+}

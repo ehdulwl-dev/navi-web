@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Posting Detail Analysis</title>
+    <link rel="stylesheet" href="/assets/css/detailAnalysis2.css">
+</head>
+<body>
+<main class="detail-analysis">
+    <header class="job-header">
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/b1a19f432596a1a2acfd220aafb1bd191225f7ba?placeholderIfAbsent=true&apiKey=005c88254743412a8fbdeef29d674822" class="company-logo" alt="Company logo" />
+        <h3 class="company-name">(주) 벨 에스엠</h3>
+        <h1 class="job-position">[효종연구소] 보안원 채용 (3교대)</h1>
+        <hr class="divider" />
+    </header>
+
+    <section class="job-details">
+        <div class="details-row">
+            <div class="details-column">
+                <div class="detail-item">
+                    <span class="detail-label">경력</span>
+                    <span class="detail-value highlight">경력 1년 이상</span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">학력</span>
+                    <span class="detail-value highlight">학력무관</span>
+                </div>
+            </div>
+            <div class="details-column">
+                <div class="detail-item">
+                    <span class="detail-label">급여</span>
+                    <span class="detail-value">월급 2.6백만원</span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">근무지역</span>
+                    <span class="detail-value">경기 용인시</span>
+                </div>
+            </div>
+        </div>
+        <div class="detail-item employment-type">
+            <span class="detail-label">근무형태</span>
+            <span class="detail-value highlight">계약직 24개월</span>
+        </div>
+        <hr class="divider" />
+    </section>
+
+    <nav class="tab-navigation">
+        <button class="tab-button">공고</button>
+        <div class="tab-button-container active">
+            <button class="tab-button">맞춤형 공고 분석</button>
+            <div class="tab-indicator"></div>
+        </div>
+    </nav>
+
+    <section class="analysis-section">
+        <header class="section-header">
+            <h2 class="section-title">유사한 직무 경험</h2>
+            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/b3fcc5a8791bad61f7c50c8a364962bf734f1942?placeholderIfAbsent=true&apiKey=005c88254743412a8fbdeef29d674822" class="info-icon" alt="Information" />
+        </header>
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/ba325d51b732a2b2047c7b7421aed2b1d9ef6589?placeholderIfAbsent=true&apiKey=005c88254743412a8fbdeef29d674822" class="chart-icon" alt="Chart" />
+    </section>
+
+    <div class="match-box"></div>
+    <p class="match-percentage">
+        해당 공고는 ㅇㅇㅇ님의 기존 이력과<br />
+        평균적으로 60% 일치해요
+    </p>
+
+    <section class="experience-section">
+        <hr class="section-divider" />
+        <p class="experience-intro">
+            ㅇㅇㅇ님의 기존 이력을<br />
+            비슷한 순으로 확인해보세요
+        </p>
+        <article class="experience-card">
+            <div class="card-border"></div>
+            <div class="card-content">
+                <h3 class="experience-company">ㅁㅁ물류회사</h3>
+                <h4 class="experience-position">물류 지원 및 현장 관리</h4>
+            </div>
+            <hr class="card-divider" />
+            <p class="experience-match">
+                순찰 및 야간 근무 경험이 경비 업무와 주요 역할이 유사해요
+            </p>
+            <span class="experience-duration">2년 이상</span>
+        </article>
+    </section>
+
+    <footer class="application-footer">
+        <button class="apply-button">지원하기</button>
+    </footer>
+</main>
+<script src="/assets/js/jobNotice/detailAnalysis2.js"></script>
+</body>

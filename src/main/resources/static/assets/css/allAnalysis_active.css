@@ -1,0 +1,340 @@
+/* Base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgba(250, 250, 250, 1);
+    font-family:
+            NanumGothic,
+            -apple-system,
+            Roboto,
+            Helvetica,
+            sans-serif;
+}
+
+.job-analysis {
+    background-color: rgba(250, 250, 250, 1);
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 480px;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* Job Header Section */
+.job-header {
+    background-color: rgba(255, 255, 255, 1);
+    display: flex;
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 49px;
+    padding-top: 17px;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.company-logo {
+    aspect-ratio: 1.22;
+    object-fit: contain;
+    object-position: center;
+    width: 61px;
+}
+
+.company-name {
+    color: rgba(90, 90, 90, 1);
+    font-size: 14px;
+    line-height: 2;
+    margin-top: 22px;
+    margin-left: 14px;
+    font-weight: normal;
+}
+
+.job-position {
+    color: rgba(33, 33, 33, 1);
+    margin-top: 20px;
+    margin-left: 13px;
+    font-size: 20px;
+}
+
+.divider {
+    aspect-ratio: 333.33;
+    width: 100%;
+    margin-top: 21px;
+    margin-left: 13px;
+    border: none;
+    height: 1px;
+    background-color: rgba(220, 220, 220, 1);
+}
+
+.job-details {
+    display: flex;
+    margin-top: 13px;
+    margin-left: 17px;
+    align-items: stretch;
+    gap: 40px 49px;
+    font-size: 13px;
+    line-height: 2;
+}
+
+.details-column {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.detail-row {
+    display: flex;
+    align-items: stretch;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.detail-label {
+    color: rgba(90, 90, 90, 1);
+}
+
+.detail-value {
+    color: rgba(90, 90, 90, 1);
+}
+
+.highlight {
+    color: rgba(75, 159, 248, 1);
+}
+
+.job-type {
+    display: flex;
+    margin-top: 16px;
+    margin-left: 17px;
+    align-items: stretch;
+    gap: 17px;
+    font-size: 13px;
+    line-height: 2;
+}
+
+.tab-navigation {
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 1);
+    display: flex;
+    margin-top: 22px;
+    width: 264px;
+    max-width: 100%;
+    padding-left: 18px;
+    padding-right: 18px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    align-items: stretch;
+    gap: 20px;
+    color: rgba(33, 33, 33, 1);
+    font-weight: 400;
+    text-align: center;
+    justify-content: space-between;
+}
+
+.tab-button {
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: rgba(33, 33, 33, 1);
+    cursor: pointer;
+    font-family: inherit;
+    padding: 0;
+}
+
+.tab-active {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.tab-indicator {
+    border-radius: 10px;
+    background-color: rgba(67, 67, 67, 1);
+    display: flex;
+    margin-top: 10px;
+    flex-shrink: 0;
+    height: 3px;
+}
+
+/* Analysis Section */
+.analysis-section {
+    background-color: rgba(255, 255, 255, 1);
+    display: flex;
+    width: 100%;
+    padding-right: 16px;
+    padding-top: 26px;
+    padding-bottom: 26px;
+    flex-direction: column;
+    align-items: stretch;
+    font-size: 22px;
+    color: rgba(33, 33, 33, 1);
+    font-weight: 400;
+    line-height: 1;
+}
+
+.analysis-header {
+    display: flex;
+    margin-left: 15px;
+    width: 100%;
+    max-width: 291px;
+    flex-direction: column;
+    align-items: stretch;
+    font-weight: 700;
+}
+
+.analysis-title {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.analysis-chart {
+    aspect-ratio: 0.95;
+    object-fit: contain;
+    object-position: center;
+    width: 174px;
+    border-radius: 5px;
+    align-self: flex-end;
+    max-width: 100%;
+}
+
+.info-icon {
+    aspect-ratio: 1;
+    object-fit: contain;
+    object-position: center;
+    width: 24px;
+    align-self: flex-end;
+    margin-top: 12px;
+}
+
+.analysis-item {
+    align-self: center;
+    display: flex;
+    margin-top: 52px;
+    width: 100%;
+    max-width: 368px;
+    align-items: stretch;
+    gap: 15px;
+}
+
+.analysis-item:first-of-type {
+    margin-top: 12px;
+}
+
+.analysis-text {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
+    margin-right: 20px;
+}
+
+.toggle-icon {
+    aspect-ratio: 1;
+    object-fit: contain;
+    object-position: center;
+    width: 24px;
+    flex-shrink: 0;
+}
+
+/* Improvement Section */
+.improvement-section {
+    background-color: rgba(255, 255, 255, 1);
+    display: flex;
+    margin-top: 12px;
+    width: 100%;
+    padding-left: 23px;
+    padding-right: 49px;
+    padding-top: 22px;
+    padding-bottom: 49px;
+    flex-direction: column;
+}
+
+.improvement-title {
+    color: rgba(33, 33, 33, 1);
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1;
+    align-self: flex-start;
+}
+
+.improvement-card {
+    border-radius: 5px;
+    background-color: rgba(236, 233, 242, 1);
+    border-color: rgba(217, 217, 217, 1);
+    border-style: solid;
+    border-width: 1px;
+    align-self: flex-end;
+    display: flex;
+    margin-top: 38px;
+    width: 100%;
+    max-width: 314px;
+    padding-top: 17px;
+    padding-bottom: 17px;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.improvement-image {
+    aspect-ratio: 1;
+    object-fit: contain;
+    object-position: center;
+    width: 125px;
+    align-self: center;
+    max-width: 100%;
+}
+
+.improvement-content {
+    display: flex;
+    margin-top: 9px;
+    padding-left: 17px;
+    padding-right: 63px;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.improvement-category {
+    color: rgba(87, 87, 87, 1);
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 2;
+}
+
+.improvement-action {
+    color: rgba(33, 33, 33, 1);
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 1;
+    margin-top: 8px;
+}
+
+/* Application Footer */
+.application-footer {
+    background-color: rgba(255, 255, 255, 1);
+    display: flex;
+    width: 100%;
+    padding: 15px 70px;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 20px;
+    color: rgba(0, 0, 0, 1);
+    font-weight: 700;
+    white-space: nowrap;
+    text-align: center;
+    justify-content: center;
+}
+
+.apply-button {
+    align-self: stretch;
+    border-radius: 5px;
+    background-color: rgba(255, 227, 118, 1);
+    min-height: 46px;
+    padding: 13px 10px;
+    border: none;
+    font-size: 20px;
+    font-weight: 700;
+    font-family: inherit;
+    cursor: pointer;
+}

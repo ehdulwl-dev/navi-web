@@ -1,0 +1,301 @@
+/* Base styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Nanum Gothic", sans-serif;
+    background-color: #fff;
+}
+
+/* Main container */
+.resume-builder {
+    max-width: none;
+    margin-left: auto;
+    margin-right: auto;
+    width: 412px;
+    padding-top: 17px;
+    background-color: #fff;
+}
+
+@media (max-width: 991px) {
+    .resume-builder {
+        max-width: 991px;
+    }
+}
+
+@media (max-width: 640px) {
+    .resume-builder {
+        max-width: 640px;
+        width: 100%;
+    }
+}
+
+/* Header section */
+.header {
+    padding: 0 24px;
+    margin-bottom: 24px;
+}
+
+@media (max-width: 640px) {
+    .header {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    gap: 53px;
+    margin-bottom: 25px;
+}
+
+.logo {
+    width: 61px;
+    height: 50px;
+}
+
+.title {
+    color: #2c2c2c;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 30px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 3px;
+    background-color: rgba(225, 225, 225, 0.34);
+}
+
+.progress-indicator {
+    width: 103px;
+    height: 3px;
+    background-color: #5a5a5a;
+}
+
+/* Company info section */
+.company-info {
+    margin: 0 19px;
+    padding: 3px 10px;
+    border: 2px solid #d9d9d9;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+.company-name {
+    color: #5a5a5a;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 30px;
+}
+
+.job-position {
+    color: #212121;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 30px;
+}
+
+/* Keyword section */
+.keyword-section {
+    margin: 34px 19px;
+    position: relative;
+}
+
+@media (max-width: 640px) {
+    .keyword-section {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+}
+
+.keyword-title {
+    color: #000;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 30px;
+    text-align: center;
+    margin-bottom: 34px;
+}
+
+.keyword-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 13px;
+    margin-bottom: 24px;
+}
+
+@media (max-width: 640px) {
+    .keyword-container {
+        gap: 8px;
+    }
+}
+
+.keyword-button {
+    padding: 1px 4px 2px 3px;
+    border-radius: 15px;
+    color: #000;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 30px;
+    text-align: center;
+    min-width: 63px;
+    background-color: #f5f5f5;
+    border: none;
+    cursor: pointer;
+}
+
+.keyword-button[data-selected="true"] {
+    background-color: #4b9ff8;
+    color: white;
+}
+
+@media (max-width: 640px) {
+    .keyword-button {
+        font-size: 12px;
+        min-width: 50px;
+    }
+}
+
+.refresh-container {
+    position: absolute;
+    right: 0;
+    top: 24px;
+    text-align: center;
+}
+
+.refresh-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.refresh-count {
+    color: #db3a3a;
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 30px;
+}
+
+/* Questions section */
+.questions-section {
+    margin: 0 19px;
+}
+
+@media (max-width: 640px) {
+    .questions-section {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+}
+
+.question-container {
+    margin-bottom: 38px;
+    position: relative;
+}
+
+.question-title {
+    color: #000;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 30px;
+    margin-bottom: 32px;
+}
+
+.input-wrapper {
+    position: relative;
+}
+
+.voice-button {
+    position: absolute;
+    right: 0;
+    top: 3px;
+    width: 27px;
+    height: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.voice-button.active .voice-icon {
+    /* This class is applied when the voice button is active */
+}
+
+.input-container {
+    position: relative;
+    border: 1px solid #4b9ff8;
+    border-radius: 10px;
+    height: 55px;
+    background-color: #fff;
+}
+
+.text-input {
+    width: 100%;
+    height: 100%;
+    padding: 14px 22px;
+    border: none;
+    border-radius: 10px;
+    color: #707070;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.text-input:focus {
+    outline: none;
+}
+
+.character-count {
+    position: absolute;
+    right: 22px;
+    top: 22px;
+    color: #707070;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 30px;
+}
+
+.current-count {
+    color: #4b9ff8;
+}
+
+/* Action buttons */
+.action-buttons {
+    margin: 42px 25px;
+    display: flex;
+    gap: 22px;
+}
+
+@media (max-width: 640px) {
+    .action-buttons {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+}
+
+.edit-button {
+    flex: 1;
+    height: 46px;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: 700;
+    cursor: pointer;
+    border: 1px solid #000;
+    background-color: #fff;
+}
+
+.generate-button {
+    flex: 1;
+    height: 46px;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: 700;
+    cursor: pointer;
+    border: none;
+    background-color: #ffe376;
+}

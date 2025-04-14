@@ -1,0 +1,265 @@
+/* Base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Nanum Gothic", sans-serif;
+    background-color: #fafafa;
+}
+
+/* Main container */
+.job-posting-container {
+    max-width: none;
+    margin-left: auto;
+    margin-right: auto;
+    width: 412px;
+    background-color: #fafafa;
+    position: relative;
+    min-height: 100vh;
+    padding-bottom: 76px; /* Space for fixed footer */
+}
+
+@media (max-width: 991px) {
+    .job-posting-container {
+        max-width: 991px;
+    }
+}
+
+@media (max-width: 640px) {
+    .job-posting-container {
+        max-width: 640px;
+        width: 100%;
+    }
+}
+
+/* Company header */
+.company-header {
+    padding: 17px 0 0 24px;
+}
+
+.company-logo {
+    width: 61px;
+    height: 50px;
+}
+
+/* Tab navigation */
+.tab-navigation {
+    margin: 20px 20px 0;
+    display: flex;
+    position: relative;
+    border-radius: 10px;
+    padding: 2px 16px;
+    height: 34px;
+    align-items: center;
+    background-color: #fff;
+}
+
+.tab-item {
+    font-size: 20px;
+    color: #212121;
+    padding: 0 10px;
+}
+
+.tab-item.active {
+    font-weight: bold;
+}
+
+.tab-indicator {
+    position: absolute;
+    bottom: 0;
+    left: 95px;
+    width: 151px;
+    height: 3px;
+    border-radius: 10px;
+    background-color: #434343;
+}
+
+/* Job details section */
+.job-details {
+    padding: 0 33px;
+    margin-top: 20px;
+}
+
+.company-name {
+    color: #5a5a5a;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.job-title {
+    color: #212121;
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 8px;
+}
+
+.job-requirements {
+    margin-top: 20px;
+    border-top: 1px solid rgba(126, 126, 126, 0.3);
+    border-bottom: 1px solid rgba(126, 126, 126, 0.3);
+    padding: 20px 0;
+}
+
+.requirement-item {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.requirement-label {
+    width: 72px;
+    color: #5a5a5a;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.requirement-value {
+    color: #5a5a5a;
+    font-size: 13px;
+    font-weight: 700;
+    margin-left: 20px;
+}
+
+/* Matching score section */
+.matching-score-section {
+    padding: 26px 15px;
+    background-color: #fff;
+}
+
+.section-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: #212121;
+}
+
+.score-display {
+    text-align: center;
+    margin: 24px 0;
+}
+
+.score-gauge {
+    width: 173px;
+    height: 173px;
+}
+
+.score-text {
+    margin-top: 10px;
+    font-size: 22px;
+    color: #212121;
+}
+
+.section-divider {
+    height: 1px;
+    margin: 20px 0;
+    background-color: rgba(126, 126, 126, 0.3);
+    border: none;
+}
+
+/* Qualification list */
+.qualification-list {
+    margin-top: 20px;
+}
+
+.qualification-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.qualification-text {
+    font-size: 22px;
+    color: #212121;
+}
+
+.chevron-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.chevron-icon {
+    width: 24px;
+    height: 24px;
+}
+
+/* Tips section */
+.tips-section {
+    padding: 22px 23px;
+    background-color: #fff;
+}
+
+.tip-card {
+    border: 1px solid #d9d9d9;
+    border-radius: 5px;
+    margin-top: 20px;
+    padding: 16px;
+    text-align: center;
+    background-color: #ece9f2;
+}
+
+.tips-icon {
+    width: 125px;
+    height: 125px;
+    margin-bottom: 15px;
+}
+
+.tip-category {
+    color: #575757;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.tip-description {
+    color: #212121;
+    font-size: 22px;
+    margin-top: 5px;
+}
+
+/* Footer with action buttons */
+.action-footer {
+    bottom: 0;
+    position: fixed;
+    width: 412px;
+    height: 76px;
+    padding: 15px;
+    display: flex;
+    gap: 12px;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+
+@media (max-width: 640px) {
+    .action-footer {
+        width: 100%;
+    }
+}
+
+.favorite-button {
+    width: 53px;
+    height: 48px;
+    border: none;
+    background: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.star-icon {
+    width: 53px;
+    height: 48px;
+}
+
+.apply-button {
+    flex: 1;
+    height: 46px;
+    border: none;
+    border-radius: 5px;
+    color: black;
+    font-size: 20px;
+    font-weight: 700;
+    background-color: #d8d8d8;
+    cursor: pointer;
+}

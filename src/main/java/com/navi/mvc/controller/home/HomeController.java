@@ -13,6 +13,6 @@ public class HomeController {
     @GetMapping( "/home")
     public String home() {
         log.debug("홈 화면 이동 !");
-        return "views/home/home";
+        return "views/home/home_recom";
     }
 }

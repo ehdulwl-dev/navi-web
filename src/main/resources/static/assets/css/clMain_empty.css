@@ -1,0 +1,159 @@
+/* Base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nanum Gothic', sans-serif;
+    background-color: #fff;
+}
+
+.app-container {
+    width: 100%;
+    max-width: 412px;
+    height: 917px;
+    margin: 0 auto;
+    position: relative;
+    background-color: #fff;
+}
+
+@media (max-width: 640px) {
+    .app-container {
+        width: 100%;
+        height: 100vh;
+    }
+}
+
+/* Header section */
+.app-header {
+    padding: 17px 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.logo {
+    width: 61px;
+    height: 50px;
+}
+
+.intro-text {
+    color: #000;
+    font-family: "Nanum Gothic", sans-serif;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 40px;
+}
+
+.job-interests {
+    color: #4b9ff8;
+    font-family: "Nanum Gothic", sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 40px;
+}
+
+/* Divider */
+.divider {
+    width: 169px;
+    height: 3px;
+    margin: 0 auto;
+    border-radius: 1.5px;
+    background-color: rgba(217, 217, 217, 0.3);
+}
+
+/* Main content */
+.app-main {
+    position: relative;
+    height: calc(100% - 250px - 116px); /* Subtract header and footer heights */
+}
+
+.intro-prompt {
+    padding: 14px 18px;
+    color: #212121;
+    font-family: "Nanum Gothic", sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 30px;
+}
+
+.ai-generate-button {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    width: 294px;
+    height: 54px;
+    border-radius: 100px;
+    padding: 5px 29px 5px 20px;
+    margin: 382px auto 0;
+    cursor: pointer;
+    background-color: #ffe376;
+    border: none;
+    position: absolute;
+    bottom: 130px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@media (max-width: 640px) {
+    .ai-generate-button {
+        width: 80%;
+        margin: 200px auto 0;
+        bottom: 130px;
+    }
+}
+
+.button-text {
+    color: #212121;
+    font-family: "Nanum Gothic", sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 30px;
+    text-align: center;
+    flex-grow: 1;
+}
+
+/* Footer navigation */
+.app-footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 116px;
+    border-top: 1px solid #d9d9d9;
+    background-color: #fcfcfc;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: space-around;
+    padding: 23px 20px;
+    height: 100%;
+}
+
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    text-decoration: none;
+}
+
+.nav-icon {
+    width: 42px;
+    height: 42px;
+}
+
+.nav-label {
+    color: #888;
+    font-family: "Nanum Gothic", sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 30px;
+    text-align: center;
+}
+
+.nav-item.active .nav-label {
+    color: #4b9ff8;
+}
