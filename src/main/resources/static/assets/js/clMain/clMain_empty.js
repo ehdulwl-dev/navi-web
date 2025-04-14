@@ -8,7 +8,7 @@ var navItems = document.querySelectorAll(".nav-item");
 document.addEventListener("DOMContentLoaded", function () {
     setupEventListeners();
 
-    fetch("/footer.html")
+    fetch("/assets/html/footer.html")
         .then(res => res.text())
         .then(data => {
             // footer 삽입

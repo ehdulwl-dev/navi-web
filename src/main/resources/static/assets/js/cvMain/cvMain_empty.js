@@ -55,7 +55,7 @@ class CvMainEmpty {
 // Footer 삽입 및 네비게이션 이벤트 등록
 document.addEventListener("DOMContentLoaded", () => {
     // footer.html을 로드하여 삽입
-    fetch("/footer.html")
+    fetch("/assets/html/footer.html")
         .then(res => res.text())
         .then(data => {
             document.getElementById("footer-container").innerHTML = data;

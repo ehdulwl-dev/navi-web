@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // footer.html 삽입 후 nav-item 이벤트 등록
-    fetch("/footer.html")
+    fetch("/assets/html/footer.html")
         .then((res) => res.text())
         .then((data) => {
             document.getElementById("footer-container").innerHTML = data;
